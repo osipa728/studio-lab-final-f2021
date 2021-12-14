@@ -4,9 +4,28 @@
 </head>
 <body>
 
-    <div id="message">
-        
+    <div id="message-container">
+        <!-- <div id="close">
+            <p>
+                X
+            </p>
+        </div> -->
+        <div id="message">
+        <p>
+            The time of information is at an end.
+            <br>
+            <br>Thank you for coming in secret, we are your experience operators today. You will only briefly hear from us during this time, as the only directions we have for you are to take a flashlight and enter through these warehouse doors and follow the corridor to the elevators. After that, our elevator operator will take you through today’s story.
+            <br>
+            <br>Do not speak to each other during this experience, as we must keep everyone as anonymous as possible. This protocol must be followed or else, well, you know what will happen.
+            <br>
+            <br>Welcome to the revived world of storytelling.
+        </p>
+        <p id="button">
+            CONTINUE
+        </p>
     </div>
+    </div>
+    
     
     <div class="intro">
         <img src="mermaid_letter.png" alt="Letter 'F' with Mermaid" style="position: fixed; left: -40%; top: 10%;">
@@ -43,4 +62,26 @@
 <script src="particles.js"></script>
 <script src="app.js"></script>
 <!-- <script src="script.js"></script> -->
+
+<script>
+    const button = document.getElementById('button');
+    const message = document.getElementById('message-container');
+    
+    button.addEventListener('click', clicked);
+    button.addEventListener('mouseover', hoverOn);
+    button.addEventListener('mouseout', hoverOff);
+
+    function clicked(){
+        message.style.display = 'none';
+    }
+
+    function hoverOn(){
+        button.style.color = '#999999';
+    }
+
+    function hoverOff(){
+        button.style.color = '#000000';
+    }
+
+</script>
 </html>
